@@ -1,0 +1,118 @@
+La encapsulación es uno de los pilares fundamentales de la programación orientada a objetos (POO) y se refiere al concepto de ocultar los detalles internos de un objeto y permitir el acceso controlado a sus propiedades y métodos desde el exterior. En PHP, se logra utilizando modificadores de acceso como `public`, `private` y `protected` para controlar la visibilidad de las propiedades y métodos dentro de una clase.
+
+### Modificadores de acceso en PHP:
+
+1. `public`: Los miembros (propiedades o métodos) son accesibles desde cualquier lugar, tanto dentro de la clase como fuera de ella.
+
+2. `private`: Los miembros solo son accesibles dentro de la misma clase. No se puede acceder a ellos desde fuera de la clase, incluso en subclases.
+
+3. `protected`: Los miembros son accesibles dentro de la misma clase y en subclases heredadas, pero no desde fuera de la clase.
+
+### Ejemplo de encapsulación en PHP:
+
+```php
+class Coche {
+    // Propiedades
+    public $marca;       // Acceso público
+    private $modelo;     // Acceso privado
+    protected $anio;     // Acceso protegido
+
+    // Constructor para inicializar propiedades
+    public function __construct($marca, $modelo, $anio) {
+        $this->marca = $marca;
+        $this->modelo = $modelo;
+        $this->anio = $anio;
+    }
+
+    // Métodos para obtener y cambiar el modelo (propiedad privada)
+    public function obtenerModelo() {
+        return $this->modelo; // Acceso a propiedad privada desde método público
+    }
+
+    public function cambiarModelo($nuevoModelo) {
+        $this->modelo = $nuevoModelo; // Acceso a propiedad privada desde método público
+    }
+}
+```
+
+En este ejemplo:
+
+- `$marca` es una propiedad pública, por lo que se puede acceder y modificar desde fuera de la clase.
+- `$modelo` es una propiedad privada, lo que significa que solo puede ser accedida y modificada desde dentro de la clase.
+- `$anio` es una propiedad protegida, accesible solo desde la misma clase y subclases.
+
+### Beneficios de la encapsulación:
+
+1. **Control del acceso:** Permite controlar quién puede acceder y modificar las propiedades y métodos de una clase, lo que contribuye a la seguridad y a mantener la integridad de los datos.
+
+2. **Ocultamiento de la implementación:** Oculta los detalles internos de implementación de una clase, lo que permite cambiar la implementación interna sin afectar el código que usa la clase.
+
+3. **Facilita la mantenibilidad:** Al separar la interfaz pública de la implementación privada, se facilita el mantenimiento y la evolución del código.
+
+La encapsulación es un principio clave en la programación orientada a objetos que promueve la modularidad, el bajo acoplamiento y el alto nivel de cohesión en el diseño de software.
+
+Los Setters y Getters son métodos utilizados para establecer (set) y obtener (get) los valores de las propiedades de un objeto, respectivamente. Se utilizan para controlar el acceso a las propiedades de una clase, permitiendo una forma controlada de modificar y obtener los valores de dichas propiedades.
+
+### Setter (Método de configuración):
+
+Un Setter es un método público de una clase que se utiliza para asignar un valor a una propiedad privada o protegida de esa clase. El propósito principal de un Setter es establecer el valor de una propiedad manteniendo un control sobre la validez de los datos asignados.
+
+#### Ejemplo de un Setter en PHP:
+
+```php
+class Coche {
+    private $marca;
+
+    // Setter para la propiedad 'marca'
+    public function setMarca($nuevaMarca) {
+        $this->marca = $nuevaMarca;
+    }
+}
+```
+
+### Getter (Método de obtención):
+
+Un Getter es un método público de una clase que se utiliza para obtener el valor de una propiedad privada o protegida de esa clase. El propósito principal de un Getter es acceder al valor de una propiedad de forma controlada.
+
+#### Ejemplo de un Getter en PHP:
+
+```php
+class Coche {
+    private $marca;
+
+    // Setter para la propiedad 'marca'
+    public function setMarca($nuevaMarca) {
+        $this->marca = $nuevaMarca;
+    }
+
+    // Getter para la propiedad 'marca'
+    public function getMarca() {
+        return $this->marca;
+    }
+}
+```
+
+### Uso de Setters y Getters:
+
+- Los Setters permiten establecer valores para propiedades privadas o protegidas, generalmente incluyen alguna lógica de validación antes de asignar el valor a la propiedad.
+- Los Getters permiten obtener valores de propiedades privadas o protegidas, proporcionando acceso controlado a esos valores sin exponer directamente la propiedad.
+
+#### Ejemplo de uso de Setters y Getters:
+
+```php
+$miCoche = new Coche();
+
+// Usar el Setter para establecer la marca
+$miCoche->setMarca("Toyota");
+
+// Usar el Getter para obtener la marca
+echo $miCoche->getMarca(); // Muestra: Toyota
+```
+
+### Beneficios de usar Setters y Getters:
+
+1. **Control de acceso:** Permiten un control más preciso sobre cómo se acceden y modifican los valores de las propiedades.
+2. **Validación de datos:** Los Setters pueden incluir lógica de validación para asegurar que los valores asignados cumplan con ciertas reglas antes de ser asignados a la propiedad.
+3. **Encapsulación:** Ayudan a mantener la encapsulación, ya que permiten el acceso controlado a las propiedades de una clase desde el exterior.
+
+El uso de Setters y Getters en PHP es una buena práctica de programación orientada a objetos ya que proporciona una forma controlada y segura de interactuar con las propiedades de un objeto.

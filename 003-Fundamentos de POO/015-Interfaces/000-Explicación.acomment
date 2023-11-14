@@ -1,0 +1,74 @@
+En PHP, una interfaz es una estructura que define un conjunto de métodos que deben ser implementados por cualquier clase que la utilice. A diferencia de las clases abstractas que pueden contener métodos con implementación parcial, una interfaz en PHP solo define métodos públicos y no contiene ninguna implementación. Las interfaces proporcionan un contrato para las clases que las implementan, asegurando que dichas clases tendrán ciertos métodos disponibles.
+
+### Sintaxis de una interfaz en PHP:
+
+```php
+interface MiInterfaz {
+    public function metodo1();
+    public function metodo2($parametro);
+}
+```
+
+- Las interfaces en PHP se definen con la palabra clave `interface`.
+- Dentro de una interfaz, se pueden definir métodos públicos sin proporcionar su implementación.
+- Las clases que implementan una interfaz deben proporcionar una implementación para todos los métodos definidos en la interfaz.
+
+### Implementación de una interfaz en una clase:
+
+```php
+class MiClase implements MiInterfaz {
+    public function metodo1() {
+        // Implementación del método 1
+    }
+
+    public function metodo2($parametro) {
+        // Implementación del método 2
+    }
+}
+```
+
+- La palabra clave `implements` se utiliza para indicar que una clase está adoptando una interfaz.
+- La clase que implementa una interfaz debe proporcionar una implementación para todos los métodos definidos en la interfaz.
+
+### Ejemplo de uso de interfaces:
+
+```php
+interface Figura {
+    public function calcularArea();
+}
+
+class Cuadrado implements Figura {
+    private $lado;
+
+    public function __construct($lado) {
+        $this->lado = $lado;
+    }
+
+    public function calcularArea() {
+        return $this->lado * $this->lado;
+    }
+}
+
+class Circulo implements Figura {
+    private $radio;
+
+    public function __construct($radio) {
+        $this->radio = $radio;
+    }
+
+    public function calcularArea() {
+        return M_PI * pow($this->radio, 2);
+    }
+}
+
+// Uso de polimorfismo
+$cuadrado = new Cuadrado(5);
+echo "Área del cuadrado: " . $cuadrado->calcularArea() . "<br>";
+
+$circulo = new Circulo(3);
+echo "Área del círculo: " . $circulo->calcularArea();
+```
+
+En este ejemplo, `Figura` es una interfaz que define el método `calcularArea()`. Las clases `Cuadrado` y `Circulo` implementan la interfaz `Figura` y proporcionan su propia implementación del método `calcularArea()` según la forma geométrica que representan.
+
+Las interfaces en PHP permiten definir contratos para las clases que las implementan, asegurando que dichas clases tendrán métodos específicos disponibles. Esto fomenta el desarrollo basado en contratos, mejora la cohesión y facilita el intercambio de clases que cumplen con las mismas interfaces en diversas partes del código.

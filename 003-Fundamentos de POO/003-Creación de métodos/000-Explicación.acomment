@@ -1,0 +1,75 @@
+En PHP, los métodos son funciones definidas dentro de una clase que encapsulan el comportamiento de los objetos creados a partir de esa clase. Los métodos pueden realizar acciones, modificar el estado interno de un objeto (propiedades) y proporcionar funcionalidades específicas para esos objetos. Aquí te explico cómo crear métodos en una clase:
+
+### Sintaxis para crear métodos:
+
+```php
+class NombreDeLaClase {
+    // ...
+
+    // Métodos
+    public function nombreDelMetodo() {
+        // Código del método
+    }
+
+    private function otroMetodo() {
+        // Código del método
+    }
+
+    protected function metodoProtegido() {
+        // Código del método
+    }
+}
+```
+
+### Ejemplo de uso de métodos en una clase:
+
+```php
+class Coche {
+    // Propiedades
+    public $marca;
+    private $modelo;
+
+    // Constructor para inicializar propiedades
+    public function __construct($marca, $modelo) {
+        $this->marca = $marca;
+        $this->modelo = $modelo;
+    }
+
+    // Método para obtener el modelo (propiedad privada)
+    public function obtenerModelo() {
+        return $this->modelo;
+    }
+
+    // Método para cambiar el modelo (propiedad privada)
+    public function cambiarModelo($nuevoModelo) {
+        $this->modelo = $nuevoModelo;
+    }
+}
+
+// Crear un objeto de la clase Coche
+$miCoche = new Coche("Toyota", "Corolla");
+
+// Acceder y modificar propiedades
+echo $miCoche->marca; // Muestra: Toyota
+
+// Acceder a un método público para obtener el modelo
+echo $miCoche->obtenerModelo(); // Muestra: Corolla
+
+// Cambiar el modelo utilizando un método público
+$miCoche->cambiarModelo("Camry");
+echo $miCoche->obtenerModelo(); // Muestra: Camry
+```
+
+En este ejemplo:
+
+- `obtenerModelo()` es un método público que permite obtener el valor de la propiedad privada `$modelo`.
+- `cambiarModelo()` es un método público que permite cambiar el valor de la propiedad privada `$modelo`.
+
+### Características clave de los métodos:
+
+- Los métodos son funciones definidas dentro de una clase y se accede a ellos a través de los objetos creados a partir de esa clase.
+- Pueden acceder y manipular las propiedades (variables) de la clase.
+- Pueden realizar acciones específicas, retornar valores, modificar el estado interno de un objeto, etc.
+- Los modificadores de acceso (`public`, `private`, `protected`) también se aplican a los métodos, controlando su visibilidad y accesibilidad desde fuera de la clase.
+
+En resumen, los métodos en PHP permiten definir el comportamiento y las acciones que los objetos de una clase pueden realizar, lo que contribuye a la encapsulación y modularidad del código en la programación orientada a objetos.

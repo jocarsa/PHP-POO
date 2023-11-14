@@ -1,0 +1,69 @@
+En PHP, las clases son un componente fundamental de la programación orientada a objetos (POO). Las clases son plantillas que definen el comportamiento y las propiedades de los objetos que se crean a partir de ellas. Aquí tienes una explicación paso a paso sobre cómo crear clases en PHP:
+
+### Sintaxis básica de una clase:
+
+```php
+class NombreDeLaClase {
+    // Propiedades (variables dentro de la clase)
+    public $propiedad1;
+    private $propiedad2;
+    protected $propiedad3;
+
+    // Métodos (funciones dentro de la clase)
+    public function metodo1() {
+        // Código del método
+    }
+
+    private function metodo2() {
+        // Código del método
+    }
+
+    protected function metodo3() {
+        // Código del método
+    }
+}
+```
+
+- `class NombreDeLaClase`: Define una nueva clase con el nombre especificado.
+- `public`, `private`, `protected`: Son modificadores de acceso que controlan la visibilidad de las propiedades y métodos.
+  - `public`: Accesible desde cualquier lugar fuera de la clase.
+  - `private`: Solo accesible desde dentro de la misma clase.
+  - `protected`: Accesible desde la misma clase y clases heredadas.
+- `$propiedad1`, `$propiedad2`, `$propiedad3`: Son variables o propiedades de la clase que almacenan datos.
+- `metodo1()`, `metodo2()`, `metodo3()`: Son funciones o métodos de la clase que definen su comportamiento.
+
+### Ejemplo de una clase en PHP:
+
+```php
+class Coche {
+    public $marca;
+    public $modelo;
+
+    public function encender() {
+        return "El coche está encendido.";
+    }
+
+    public function apagar() {
+        return "El coche está apagado.";
+    }
+}
+```
+
+### Uso de la clase para crear objetos:
+
+Una vez que tienes la clase definida, puedes crear objetos (instancias) a partir de ella:
+
+```php
+// Crear un objeto de la clase Coche
+$miCoche = new Coche();
+
+// Acceder a las propiedades y métodos del objeto
+$miCoche->marca = "Toyota";
+$miCoche->modelo = "Corolla";
+
+echo $miCoche->encender(); // Muestra: El coche está encendido.
+```
+
+En este ejemplo, `$miCoche` es un objeto de la clase `Coche`. Puedes acceder a sus propiedades (`marca` y `modelo`) y llamar a sus métodos (`encender()` y `apagar()`).
+
+Las clases en PHP te permiten estructurar tu código de manera más organizada y modular, facilitando la reutilización y mantenimiento del código. Puedes crear múltiples objetos a partir de una misma clase, cada uno con su propio estado y comportamiento.

@@ -1,0 +1,61 @@
+La Programación Orientada a Objetos (POO) es un paradigma de programación que se basa en el concepto de "objetos", los cuales representan entidades del mundo real que tienen atributos (datos) y comportamientos (acciones). Este enfoque permite modelar sistemas de software de manera más cercana a cómo se perciben y se organizan las cosas en la vida real.
+
+### Principios fundamentales de la POO:
+
+1. **Clases y objetos:** Las clases son plantillas que definen las propiedades y comportamientos comunes a un tipo particular de objeto. Los objetos son instancias individuales de esas clases.
+
+2. **Abstracción:** La abstracción consiste en representar las características esenciales de un objeto sin mostrar los detalles complejos de su implementación.
+
+3. **Encapsulamiento:** Es el proceso de ocultar los detalles internos de un objeto y exponer solo los aspectos relevantes para interactuar con él. Se logra mediante el uso de modificadores de acceso (public, private, protected) para controlar el acceso a los datos y métodos de un objeto.
+
+4. **Herencia:** Permite que una clase (clase hija o subclase) herede atributos y métodos de otra clase (clase padre o superclase). Esto fomenta la reutilización del código y la creación de jerarquías de clases.
+
+5. **Polimorfismo:** Es la capacidad de diferentes objetos de responder a un mismo mensaje o método de manera distinta, dependiendo de su tipo. Se puede lograr mediante la sobrescritura de métodos (override) y la implementación de interfaces.
+
+### Elementos clave de la POO:
+
+- **Clases:** Son plantillas que definen propiedades (variables) y métodos (funciones) comunes a un grupo de objetos.
+
+- **Objetos:** Son instancias individuales de una clase. Tienen sus propias copias de variables y pueden ejecutar los métodos definidos en la clase.
+
+- **Atributos:** Son variables que representan las características de un objeto.
+
+- **Métodos:** Son funciones que definen el comportamiento de un objeto.
+
+### Ejemplo conceptual de la POO:
+
+```php
+class Coche {
+    // Propiedades
+    public $marca;
+    private $modelo;
+
+    // Método constructor para inicializar propiedades
+    public function __construct($marca, $modelo) {
+        $this->marca = $marca;
+        $this->modelo = $modelo;
+    }
+
+    // Métodos para acceder a las propiedades
+    public function obtenerModelo() {
+        return $this->modelo;
+    }
+
+    public function cambiarModelo($nuevoModelo) {
+        $this->modelo = $nuevoModelo;
+    }
+}
+
+// Crear un objeto de la clase Coche
+$miCoche = new Coche("Toyota", "Corolla");
+
+// Acceder y modificar propiedades utilizando métodos
+echo $miCoche->marca; // Muestra: Toyota
+
+echo $miCoche->obtenerModelo(); // Muestra: Corolla
+
+$miCoche->cambiarModelo("Camry");
+echo $miCoche->obtenerModelo(); // Muestra: Camry
+```
+
+La Programación Orientada a Objetos proporciona una manera organizada y modular de desarrollar software al modelar conceptos del mundo real como objetos con atributos y comportamientos asociados. Ayuda a crear código más reutilizable, mantenible y escalable al permitir la creación de relaciones entre objetos y la representación de abstracciones complejas de manera más clara.

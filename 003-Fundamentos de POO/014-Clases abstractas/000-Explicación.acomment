@@ -1,0 +1,59 @@
+En PHP, una clase abstracta es una plantilla de clase que no puede ser instanciada por sí misma, sino que se utiliza como base para otras clases. Define métodos sin implementación con la intención de que las clases hijas (subclases) implementen estos métodos según sus propias necesidades. Las clases abstractas son útiles cuando se quiere establecer una estructura común para un grupo de clases relacionadas.
+
+### Sintaxis de una clase abstracta en PHP:
+
+```php
+abstract class ClaseAbstracta {
+    // Método abstracto sin implementación
+    abstract public function metodoAbstracto();
+
+    // Método regular con implementación
+    public function metodoNormal() {
+        return "Este es un método normal";
+    }
+}
+```
+
+### Características clave de las clases abstractas:
+
+1. **Palabra clave `abstract`:** Se utiliza para declarar una clase abstracta. No se pueden crear instancias directas de una clase abstracta.
+
+2. **Métodos abstractos:** Son declaraciones de métodos que no tienen implementación en la clase abstracta. Se definen con la palabra clave `abstract` y no pueden tener cuerpo en la clase abstracta. Las subclases deben implementar todos los métodos abstractos de la clase padre.
+
+3. **Métodos regulares:** La clase abstracta puede contener métodos regulares con implementación normal. Estos métodos pueden ser heredados y utilizados directamente por las subclases.
+
+### Ejemplo de una clase abstracta y su implementación en una subclase:
+
+```php
+abstract class Animal {
+    abstract public function hacerSonido();
+}
+
+class Perro extends Animal {
+    public function hacerSonido() {
+        return "Guau";
+    }
+}
+
+class Gato extends Animal {
+    public function hacerSonido() {
+        return "Miau";
+    }
+}
+
+// Crear instancias y utilizar polimorfismo
+$animales = [
+    new Perro(),
+    new Gato(),
+];
+
+foreach ($animales as $animal) {
+    echo $animal->hacerSonido() . "<br>";
+}
+// Salida: Guau
+//         Miau
+```
+
+En este ejemplo, `Animal` es una clase abstracta que define un método abstracto `hacerSonido()`. Las clases `Perro` y `Gato` son subclases que heredan de `Animal` y proporcionan su propia implementación del método `hacerSonido()`.
+
+Las clases abstractas proporcionan una manera de definir una estructura común para un grupo de clases relacionadas y asegurar que ciertos métodos se implementen en las subclases. Esto promueve la coherencia y la reutilización del código en aplicaciones más grandes y complejas.

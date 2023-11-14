@@ -1,0 +1,69 @@
+La herencia es un concepto fundamental en la programación orientada a objetos (POO) que permite la creación de nuevas clases basadas en clases existentes. En PHP, la herencia es un mecanismo que permite a una clase (llamada clase hija o subclase) heredar propiedades y métodos de otra clase (llamada clase padre o superclase). Esto permite la reutilización de código y la extensión de la funcionalidad de las clases existentes.
+
+### Sintaxis de la herencia en PHP:
+
+Para que una clase herede de otra en PHP, se utiliza la palabra clave `extends`. Aquí tienes un ejemplo de cómo se define la herencia:
+
+```php
+// Clase padre o superclase
+class Figura {
+    public function area() {
+        return "Área de la figura";
+    }
+}
+
+// Clase hija o subclase que hereda de Figura
+class Circulo extends Figura {
+    // Métodos adicionales específicos para la clase Circulo
+    public function diametro() {
+        return "Diámetro del círculo";
+    }
+}
+```
+
+En este ejemplo:
+
+- `Figura` es la clase padre que tiene un método `area()`.
+- `Circulo` es la clase hija que hereda de `Figura` utilizando `extends` y también tiene un método propio `diametro()`.
+
+### Acceso a propiedades y métodos heredados:
+
+Una clase hija hereda automáticamente todos los métodos y propiedades públicas y protegidas de la clase padre. Esto significa que la clase hija puede utilizar estos métodos y propiedades directamente como si fueran propios.
+
+#### Ejemplo de acceso a métodos heredados:
+
+```php
+$circulo = new Circulo();
+
+echo $circulo->area(); // Acceso al método heredado de la clase padre
+// Muestra: Área de la figura
+
+echo $circulo->diametro(); // Acceso al método propio de la clase Circulo
+// Muestra: Diámetro del círculo
+```
+
+### Sobrescritura (Override) de métodos:
+
+Una clase hija puede modificar el comportamiento de un método heredado de la clase padre al definir su propia implementación del método con el mismo nombre y firma. Este proceso se llama "sobrescritura" o "override".
+
+#### Ejemplo de sobrescritura de un método:
+
+```php
+class Cuadrado extends Figura {
+    public function area() {
+        return "Área del cuadrado"; // Sobrescritura del método area()
+    }
+}
+
+$cuadrado = new Cuadrado();
+echo $cuadrado->area(); // Acceso al método sobrescrito de la clase Cuadrado
+// Muestra: Área del cuadrado
+```
+
+### Ventajas de la herencia:
+
+1. **Reutilización de código:** Permite utilizar y extender las funcionalidades de las clases existentes, evitando la duplicación de código.
+2. **Organización y estructura:** Facilita la creación de jerarquías de clases, permitiendo una mejor organización y estructuración del código.
+3. **Extensibilidad:** Facilita la ampliación de funcionalidades añadiendo nuevos métodos y propiedades a las clases hijas sin modificar la clase padre.
+
+La herencia es un concepto poderoso en la POO que ayuda a crear un código más modular, flexible y fácil de mantener al permitir la reutilización y extensión de clases existentes.

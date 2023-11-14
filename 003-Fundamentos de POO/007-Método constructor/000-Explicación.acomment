@@ -1,0 +1,57 @@
+En la programación orientada a objetos (POO) en PHP, un constructor es un método especial dentro de una clase que se ejecuta automáticamente cada vez que se instancia (se crea) un objeto de esa clase. Su función principal es inicializar las propiedades de un objeto o realizar cualquier acción necesaria en el momento de la creación del objeto.
+
+### Sintaxis del constructor en PHP:
+
+El constructor en PHP se define mediante el método `__construct()`. Aquí tienes un ejemplo de cómo se declara un constructor dentro de una clase:
+
+```php
+class MiClase {
+    // Constructor
+    public function __construct() {
+        // Código del constructor
+    }
+}
+```
+
+### Uso del constructor para inicializar propiedades:
+
+Es común utilizar el constructor para inicializar las propiedades de un objeto al momento de su creación. Por ejemplo:
+
+```php
+class Coche {
+    public $marca;
+    public $modelo;
+
+    // Constructor para inicializar propiedades
+    public function __construct($marca, $modelo) {
+        $this->marca = $marca;
+        $this->modelo = $modelo;
+    }
+}
+```
+
+### Ejemplo de uso del constructor:
+
+```php
+// Crear un objeto de la clase Coche utilizando el constructor
+$miCoche = new Coche("Toyota", "Corolla");
+
+// Acceder a las propiedades del objeto creado
+echo $miCoche->marca; // Muestra: Toyota
+echo $miCoche->modelo; // Muestra: Corolla
+```
+
+En este ejemplo:
+
+- El constructor `__construct()` recibe dos parámetros `$marca` y `$modelo` y los utiliza para inicializar las propiedades `$marca` y `$modelo` del objeto.
+- Cuando se crea un objeto de la clase `Coche` con `new Coche("Toyota", "Corolla")`, se llama automáticamente al constructor, y se establecen los valores para las propiedades `$marca` y `$modelo`.
+
+### Características clave del constructor:
+
+1. **Nombre reservado:** En PHP, el nombre del constructor es `__construct()`. Debe tener este nombre para que se ejecute automáticamente al instanciar un objeto.
+
+2. **Inicialización de propiedades:** El constructor puede recibir parámetros que se utilizan para inicializar las propiedades del objeto.
+
+3. **Ejecución automática:** Se ejecuta automáticamente cuando se crea una nueva instancia del objeto con `new`.
+
+El uso del constructor es fundamental para asegurar que los objetos sean creados correctamente con sus propiedades inicializadas, lo que ayuda a mantener un estado coherente y consistente en la aplicación.

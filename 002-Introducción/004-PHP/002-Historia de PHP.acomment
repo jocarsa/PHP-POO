@@ -1,0 +1,15 @@
+PHP, inicialmente conocido como "Personal Home Page" (Página Personal en Español), fue creado por Rasmus Lerdorf en 1994. Originalmente, PHP era un conjunto de scripts CGI escritos en el lenguaje de programación C. Estos scripts se utilizaron principalmente para mantener su currículum vitae en línea y realizar ciertas tareas básicas.
+
+La primera versión pública de PHP, llamada PHP/FI (Form Interpreter), fue lanzada en 1995. Esta versión permitía a los usuarios crear formularios web y fue adoptada rápidamente por la incipiente comunidad de desarrolladores web.
+
+A medida que PHP/FI ganaba popularidad, se introdujeron características más avanzadas y nuevas versiones. En 1997, Zeev Suraski y Andi Gutmans reescribieron el motor de PHP y crearon PHP 3, que fue una versión significativamente mejorada y mucho más rápida.
+
+PHP 4, lanzado en 2000, introdujo características fundamentales como soporte para la Programación Orientada a Objetos (POO), manejo de excepciones, mejor manejo de sesiones y más.
+
+PHP 5, lanzado en 2004, trajo mejoras significativas en la POO con la introducción de constructores y destructores, visibilidad de propiedades y métodos, interfaces, entre otras características.
+
+PHP 7, lanzado en 2015, trajo mejoras de rendimiento masivas, reducción de consumo de memoria y manejo de errores más robusto. Estas mejoras llevaron a un gran aumento en el rendimiento en comparación con las versiones anteriores.
+
+Desde entonces, PHP ha continuado evolucionando con versiones posteriores, como PHP 7.4 y PHP 8. Estas versiones han introducido características adicionales, como tipos de retorno y parámetros más fuertes, atributos, expresiones match, mejoras en manejo de errores, JIT (Just-In-Time) en PHP 8, entre otras.
+
+Hoy en día, PHP es uno de los lenguajes de programación más utilizados para el desarrollo web, impulsando una gran cantidad de sitios web y aplicaciones, desde blogs y CMS hasta plataformas de comercio electrónico y sistemas empresariales. La comunidad de desarrollo de PHP sigue siendo activa y sigue mejorando continuamente el lenguaje para mantener su relevancia y eficiencia en el desarrollo de aplicaciones web modernas.

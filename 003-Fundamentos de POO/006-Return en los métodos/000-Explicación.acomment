@@ -1,0 +1,49 @@
+En PHP, el uso de `return` en los métodos de una clase se refiere a la instrucción que indica al método qué valor debe devolver cuando es invocado. La sentencia `return` se utiliza para devolver un valor de un método. Este valor puede ser cualquier tipo de dato: un número, una cadena de texto, un objeto, un array o incluso `null`.
+
+### Sintaxis básica del `return` en un método:
+
+```php
+class MiClase {
+    public function miMetodo() {
+        // ... (código del método)
+
+        return $valor; // Devolver un valor específico
+    }
+}
+```
+
+### Ejemplo de uso del `return` en un método:
+
+```php
+class Calculadora {
+    public function sumar($a, $b) {
+        $resultado = $a + $b;
+
+        return $resultado; // Devolver el resultado de la suma
+    }
+}
+
+// Crear un objeto de la clase Calculadora
+$calc = new Calculadora();
+
+// Llamar al método sumar() y obtener el resultado
+$suma = $calc->sumar(5, 3);
+echo "La suma es: " . $suma; // Muestra: La suma es: 8
+```
+
+En este ejemplo:
+
+- El método `sumar()` de la clase `Calculadora` toma dos parámetros y devuelve la suma de esos dos valores.
+- La sentencia `return $resultado;` devuelve el valor calculado cuando el método es invocado.
+
+### Usos comunes del `return` en los métodos:
+
+1. **Devolver valores calculados:** Devolver resultados de operaciones realizadas dentro del método, como en el ejemplo de la suma.
+   
+2. **Retornar objetos:** Los métodos pueden crear y retornar objetos de otras clases.
+
+3. **Devolver indicadores o códigos de estado:** En algunos casos, los métodos pueden devolver un valor que indica si la operación tuvo éxito o no.
+
+4. **Retorno condicional:** Dependiendo de ciertas condiciones, un método puede decidir qué valor devolver usando múltiples sentencias `return`.
+
+El uso del `return` en los métodos permite que estos métodos proporcionen resultados y valores a otras partes del código que los invocan, lo que les permite realizar acciones o tomar decisiones basadas en esos valores devueltos.

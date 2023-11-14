@@ -1,0 +1,56 @@
+En PHP, las propiedades son variables asociadas a una clase que representan las características o datos de los objetos creados a partir de esa clase. Estas propiedades definen el estado de los objetos y pueden tener diferentes niveles de visibilidad (public, private, protected), lo que determina su accesibilidad desde dentro y fuera de la clase. Aquí te explico cómo crear propiedades en una clase:
+
+### Sintaxis para crear propiedades:
+
+```php
+class NombreDeLaClase {
+    // Propiedades
+    public $propiedadPublica; // Pública: accesible desde cualquier lugar fuera de la clase
+    private $propiedadPrivada; // Privada: solo accesible desde dentro de la misma clase
+    protected $propiedadProtegida; // Protegida: accesible desde la misma clase y clases heredadas
+}
+```
+
+### Ejemplo de uso de propiedades en una clase:
+
+```php
+class Coche {
+    // Propiedades
+    public $marca;
+    private $modelo;
+    protected $anio;
+
+    // Constructor para inicializar propiedades
+    public function __construct($marca, $modelo, $anio) {
+        $this->marca = $marca;
+        $this->modelo = $modelo;
+        $this->anio = $anio;
+    }
+
+    // Método para obtener el modelo (propiedad privada)
+    public function obtenerModelo() {
+        return $this->modelo;
+    }
+}
+
+// Crear un objeto de la clase Coche
+$miCoche = new Coche("Toyota", "Corolla", 2023);
+
+// Acceder y modificar propiedades públicas
+echo $miCoche->marca; // Muestra: Toyota
+$miCoche->marca = "Honda";
+echo $miCoche->marca; // Muestra: Honda
+
+// No se puede acceder directamente a la propiedad privada desde fuera de la clase
+// echo $miCoche->modelo; // Esto causaría un error de acceso privado
+
+// Sin embargo, se puede obtener el valor a través de un método público
+echo $miCoche->obtenerModelo(); // Muestra: Corolla
+```
+
+- Las propiedades en una clase se definen utilizando las palabras clave `public`, `private`, o `protected`, seguidas por el nombre de la propiedad.
+- `public` permite acceder a la propiedad desde fuera de la clase.
+- `private` restringe el acceso a la propiedad solo dentro de la misma clase.
+- `protected` permite el acceso a la propiedad dentro de la misma clase y en clases heredadas.
+
+En resumen, las propiedades de una clase en PHP definen las características o datos que cada objeto creado a partir de esa clase puede contener, y los modificadores de acceso controlan su visibilidad y manipulación desde fuera de la clase.

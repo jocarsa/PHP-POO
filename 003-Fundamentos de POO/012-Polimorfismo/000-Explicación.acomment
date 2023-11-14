@@ -1,0 +1,43 @@
+El polimorfismo es un concepto clave en la programación orientada a objetos que se refiere a la capacidad de objetos de distintas clases de responder a una misma interfaz, método o función de manera diferente. Esto permite tratar distintos objetos de manera uniforme a través de un tipo común, lo que brinda flexibilidad y extensibilidad al código.
+
+### Tipos de polimorfismo en PHP:
+
+1. **Polimorfismo de sobrescritura (Override):** Ocurre cuando una clase hija implementa un método de la clase padre de una manera diferente. Esto permite que diferentes clases tengan métodos con el mismo nombre y firma, pero con comportamientos específicos.
+
+Ejemplo de polimorfismo de sobrescritura:
+
+```php
+class Animal {
+    public function hacerSonido() {
+        return "Hace algún sonido";
+    }
+}
+
+class Perro extends Animal {
+    public function hacerSonido() {
+        return "Guau";
+    }
+}
+
+class Gato extends Animal {
+    public function hacerSonido() {
+        return "Miau";
+    }
+}
+
+// Uso del polimorfismo
+$animales = [
+    new Perro(),
+    new Gato(),
+];
+
+foreach ($animales as $animal) {
+    echo $animal->hacerSonido() . "<br>";
+}
+// Salida: Guau
+//         Miau
+```
+
+2. **Polimorfismo de sobrecarga (Overloading):** En PHP, no se tiene el polimorfismo de sobrecarga como en otros lenguajes. La sobrecarga permite que un objeto tenga diferentes implementaciones de un método basadas en el número o tipo de argumentos. En PHP, si bien no existe directamente la sobrecarga de métodos, se puede simular mediante el uso de métodos mágicos como `__call()` y `__callStatic()`.
+
+El polimorfismo permite tratar objetos de distintas clases de manera uniforme a través de una interfaz común, lo que facilita la extensión y mantenimiento del código. Además, promueve el uso de la herencia y la abstracción para crear una estructura más flexible y modular en los sistemas de software.
