@@ -1,0 +1,25 @@
+En los estilos añadidos se realizaron los siguientes cambios:
+
+1. **Modificación del tamaño de fuente para el `<aside>`**:
+   ```css
+   aside {
+       /* ... */
+       font-size: 11px;
+   }
+   ```
+   - `font-size: 11px;`: Define el tamaño del texto dentro del elemento `<aside>` como 11 píxeles. Esto puede ser útil para ajustar el tamaño del texto específicamente para el contenido dentro del `<aside>`.
+
+2. **Estilos adicionales para los elementos `<input>` dentro de los formularios**:
+   ```css
+   form input {
+       width: 100%;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       margin-top: 20px;
+   }
+   ```
+   - `width: 100%;`: Establece que el ancho de los campos de entrada se ajuste al 100% del contenedor padre, lo que permite que los campos de entrada se expandan horizontalmente.
+   - `padding-top: 10px; padding-bottom: 10px;`: Agrega relleno superior e inferior de 10 píxeles a los campos de entrada para mejorar la apariencia y el espacio interno.
+   - `margin-top: 20px;`: Agrega un margen superior de 20 píxeles a los campos de entrada para separarlos verticalmente en el formulario.
+
+Estos cambios proporcionan un tamaño de fuente específico para el contenido dentro del `<aside>`, así como ajustes en la presentación de los campos de entrada dentro de los formularios para mejorar su apariencia y diseño.

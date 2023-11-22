@@ -1,0 +1,5 @@
+En este código, la novedad radica en la inclusión de la clase `Direccion` y su ausencia en su uso directo dentro del contexto del `Carrito`. Aunque se ha incluido la clase `Direccion`, no se ha utilizado explícitamente para asociar una dirección al carrito o al cliente. Por lo tanto, la principal novedad es la inclusión de la clase `Direccion` en la lista de archivos incluidos (`include`) sin su utilización inmediata en la lógica del código mostrado.
+
+Se ha utilizado el mismo flujo de código que se presentó anteriormente, con la creación de un objeto `Carrito`, la adición de un `Cliente` al carrito y la inserción de productos en el carrito utilizando la clase `ProductoFisico`. Sin embargo, la clase `Direccion` ha sido incluida pero no se ha integrado en esta porción específica del código.
+
+La adición de la clase `Direccion` sugiere la posibilidad de que en desarrollos futuros, el sistema pueda incorporar direcciones asociadas a los clientes o relacionadas con los pedidos en el carrito. No obstante, en este fragmento de código en particular, no se ha implementado dicha funcionalidad de manera explícita.

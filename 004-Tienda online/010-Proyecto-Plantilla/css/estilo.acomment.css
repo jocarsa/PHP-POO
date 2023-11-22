@@ -1,0 +1,45 @@
+Este código representa una hoja de estilos básica para una página web. A continuación se explica lo que hace cada parte del código:
+
+1. **Estilos generales**:
+   ```css
+   body, html {
+       background: grey;
+       font-family: sans-serif;
+   }
+   ```
+   - Establece un fondo gris para el cuerpo de la página y el área del documento HTML.
+   - Define `sans-serif` como la familia de fuentes predeterminada para todo el contenido del cuerpo y la página web.
+
+2. **Estilos para las secciones principales (main, footer, header)**:
+   ```css
+   main, footer, header {
+       background: white;
+       width: 800px;
+       padding: 20px;
+       margin: auto;
+   }
+   ```
+   - Establece un fondo blanco para las áreas de `main`, `footer` y `header`.
+   - Limita su ancho a 800 píxeles.
+   - Les aplica un relleno interior de 20 píxeles.
+   - Los centra horizontalmente en la página con `margin: auto;`.
+
+3. **Estilos para los artículos**:
+   ```css
+   article {
+       width: 250px;
+       display: inline-block;
+   }
+   ```
+   - Limita el ancho de cada artículo a 250 píxeles.
+   - Utiliza `display: inline-block;` para que los elementos `<article>` se muestren uno al lado del otro, en lugar de uno debajo del otro como lo haría por defecto si fueran bloques.
+
+4. **Estilos para header y footer**:
+   ```css
+   header, footer {
+       text-align: center;
+   }
+   ```
+   - Centra el texto dentro de los elementos `<header>` y `<footer>`.
+
+En resumen, estos estilos establecen un diseño básico para la página web, definiendo la estructura general y la apariencia de las secciones principales, los artículos, así como la alineación del texto en el encabezado y pie de página.

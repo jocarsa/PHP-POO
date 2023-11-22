@@ -1,0 +1,22 @@
+Los cambios en esta versión de la hoja de estilos son los siguientes:
+
+1. **Adición del estilo para el elemento `<aside>`**:
+   ```css
+   aside {
+       position: absolute;
+       width: 200px;
+       height: 300px;
+       background: white;
+       padding: 20px;
+       bottom: 20px;
+       right: 20px;
+       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+   }
+   ```
+   - `position: absolute;`: Coloca el elemento `<aside>` en una posición absoluta dentro del documento, relativo al primer ancestro que tenga una posición diferente a `static`.
+   - `width: 200px; height: 300px;`: Establece el ancho y la altura del elemento `<aside>`.
+   - `background: white; padding: 20px;`: Define un fondo blanco y añade relleno interno al elemento.
+   - `bottom: 20px; right: 20px;`: Posiciona el elemento a 20 píxeles desde la parte inferior y derecha del contenedor más cercano que tenga una posición establecida.
+   - `box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);`: Agrega una sombra al elemento con un desplazamiento de 0 píxeles en el eje X, 5 píxeles en el eje Y y un desenfoque de 10 píxeles, utilizando un color negro con transparencia al 40%.
+
+Estos cambios introducen un elemento `<aside>` en la página web, colocado en una posición fija en la esquina inferior derecha con un tamaño predefinido, un fondo blanco, relleno interno y una sombra sutil para destacarlo del resto del contenido.

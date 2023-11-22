@@ -1,0 +1,28 @@
+En la versión actualizada de la hoja de estilos, se han agregado algunas modificaciones:
+
+1. **Adición de reglas para el elemento `<aside>`**:
+   ```css
+   aside {
+       position: absolute;
+       width: 200px;
+       height: 300px;
+       background: white;
+       padding: 20px;
+       bottom: 20px;
+       right: 20px;
+       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+       overflow-y: scroll;
+   }
+   ```
+   - `overflow-y: scroll;`: Habilita la barra de desplazamiento vertical en el `<aside>` si su contenido excede su altura definida. Esto permitirá desplazarse si hay más contenido del que puede mostrarse dentro del `<aside>`.
+
+2. **Estilización de encabezados `<h5>` dentro de `<aside>`**:
+   ```css
+   aside h5 {
+       padding: 0px;
+       margin: 0px;
+   }
+   ```
+   - `padding: 0px; margin: 0px;`: Elimina cualquier relleno o margen predeterminado que puedan tener los encabezados `<h5>` dentro del elemento `<aside>`. Esto ayuda a establecer márgenes y rellenos específicos para los encabezados `<h5>` dentro de este contexto sin heredar estilos no deseados.
+
+Estos cambios agregados permiten el desplazamiento vertical dentro del `<aside>` en caso de que su contenido supere su altura, además de establecer un formato específico para los encabezados `<h5>` dentro de este elemento.
