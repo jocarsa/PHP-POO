@@ -1,0 +1,100 @@
+{
+    "productos": [
+        {
+            "precio": "30",
+            "nombre": "Zapatillas de tenis",
+            "descripcion": "Zapatillas para poder practicas tenis de forma c\u00f3moda"
+        },
+        {
+            "precio": "30",
+            "nombre": "Zapatillas de tenis",
+            "descripcion": "Zapatillas para poder practicas tenis de forma c\u00f3moda"
+        },
+        {
+            "precio": "30",
+            "nombre": "Zapatillas de tenis",
+            "descripcion": "Zapatillas para poder practicas tenis de forma c\u00f3moda"
+        },
+        {
+            "precio": "30",
+            "nombre": "Zapatillas de tenis",
+            "descripcion": "Zapatillas para poder practicas tenis de forma c\u00f3moda"
+        },
+        {
+            "precio": "50",
+            "nombre": "Raqueta de tenis",
+            "descripcion": "Raqueta para poder jugar al tenis c\u00f3modamente"
+        },
+        {
+            "precio": "50",
+            "nombre": "Raqueta de tenis",
+            "descripcion": "Raqueta para poder jugar al tenis c\u00f3modamente"
+        },
+        {
+            "precio": "50",
+            "nombre": "Raqueta de tenis",
+            "descripcion": "Raqueta para poder jugar al tenis c\u00f3modamente"
+        },
+        {
+            "precio": "50",
+            "nombre": "Raqueta de tenis",
+            "descripcion": "Raqueta para poder jugar al tenis c\u00f3modamente"
+        },
+        {
+            "precio": "50",
+            "nombre": "Raqueta de tenis",
+            "descripcion": "Raqueta para poder jugar al tenis c\u00f3modamente"
+        },
+        {
+            "precio": "50",
+            "nombre": "Raqueta de tenis",
+            "descripcion": "Raqueta para poder jugar al tenis c\u00f3modamente"
+        },
+        {
+            "precio": "10",
+            "nombre": "Calcetines de deporte",
+            "descripcion": "Calcetines blancos para poder hacer deporte"
+        },
+        {
+            "precio": "10",
+            "nombre": "Calcetines de deporte",
+            "descripcion": "Calcetines blancos para poder hacer deporte"
+        },
+        {
+            "precio": "10",
+            "nombre": "Calcetines de deporte",
+            "descripcion": "Calcetines blancos para poder hacer deporte"
+        },
+        {
+            "precio": "10",
+            "nombre": "Calcetines de deporte",
+            "descripcion": "Calcetines blancos para poder hacer deporte"
+        },
+        {
+            "precio": "10",
+            "nombre": "Calcetines de deporte",
+            "descripcion": "Calcetines blancos para poder hacer deporte"
+        },
+        {
+            "precio": "10",
+            "nombre": "Calcetines de deporte",
+            "descripcion": "Calcetines blancos para poder hacer deporte"
+        },
+        {
+            "precio": "50",
+            "nombre": "Raqueta de tenis",
+            "descripcion": "Raqueta para poder jugar al tenis c\u00f3modamente"
+        },
+        {
+            "precio": "50",
+            "nombre": "Raqueta de tenis",
+            "descripcion": "Raqueta para poder jugar al tenis c\u00f3modamente"
+        }
+    ],
+    "cliente": {
+        "nombre": "gwert",
+        "apellidos": "twertew",
+        "email": "wtertwert"
+    },
+    "total": null
+}
